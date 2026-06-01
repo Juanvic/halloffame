@@ -5,6 +5,8 @@ import Pokemon from "../components/Pokemon.jsx";
 import TotalPokemons from "../components/TotalPokemons.jsx";
 import { getPokemon } from "../services/pokemonService.js";
 import InputText from "../components/ui/InputText.jsx";
+import ShareButton from "../components/ui/ShareButton.jsx";
+
 
 function Halloffame() {
   const [name, setName] = useState("");
@@ -48,10 +50,11 @@ function Halloffame() {
           <Celebration />
           <div className="card">
             <Pokemon pokemons={pokemons} removePokemon={removePokemon} />
+            {pokemons.length > 0 && <ShareButton pokemons={pokemons} />}
           </div>
         </div>
         <div>
-          <p style={{ color: "#fff" }}>Pokémon selected: {pokemons.length}/6</p>
+          <p style={{ color: "#f3f4f6" }}>Pokémon selected: {pokemons.length}/6</p>
           <InputText value={name} onChange={(e) => setName(e.target.value)} />
 
           <button onClick={searchPokemon}>Search</button>
