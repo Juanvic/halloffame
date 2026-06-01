@@ -1,12 +1,13 @@
 import "./Halloffame.css";
 import { useState } from "react";
-import Celebration from "../components/Celebration.jsx";
+import Celebration from "../components/ui/Celebration.jsx";
 import Pokemon from "../components/Pokemon.jsx";
 import TotalPokemons from "../components/TotalPokemons.jsx";
 import { getPokemon } from "../services/pokemonService.js";
 import InputText from "../components/ui/InputText.jsx";
 import ShareButton from "../components/ui/ShareButton.jsx";
 
+import { FaSearch } from "react-icons/fa";
 
 function Halloffame() {
   const [name, setName] = useState("");
@@ -54,10 +55,17 @@ function Halloffame() {
           </div>
         </div>
         <div>
-          <p style={{ color: "#f3f4f6" }}>Pokémon selected: {pokemons.length}/6</p>
+          <p style={{ color: "#f3f4f6" }}>
+            Pokémon selected: {pokemons.length}/6
+          </p>
           <InputText value={name} onChange={(e) => setName(e.target.value)} />
 
-          <button onClick={searchPokemon}>Search</button>
+          <button
+            onClick={searchPokemon}
+            style={{ backgroundColor: "transparent", border: "none" }}
+          >
+            <FaSearch color='#f3f4f6' size={24} title="Search" />
+          </button>
         </div>
       </main>
     </>
