@@ -9,8 +9,8 @@ function PokemonCard({ pokemon, onRemove }) {
 
       <img src={pokemon.sprites.front_default} alt={pokemon.name} />
 
-      <p># {pokemon.id}</p>
-      <p>
+      {/* <p># {pokemon.id}</p> */}
+      {/* <p>
         <strong>Types:</strong>
       </p>
 
@@ -24,13 +24,13 @@ function PokemonCard({ pokemon, onRemove }) {
         {pokemon.types.map((item) => (
           <li key={item.type.name}>{item.type.name}</li>
         ))}
-      </ul>
+      </ul> */}
 
       {/* Fazer checkbox para clicar se é shiny ou não e trocar a sprite */}
-      <div>
+      {/* <div>
         <label for="isShiny">Shiny: </label>
         <input type="checkbox" name="isShiny"></input>
-      </div>
+      </div> */}
 
       <button onClick={() => onRemove(pokemon.id)}>Remove</button>
     </div>

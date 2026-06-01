@@ -4,6 +4,7 @@ import Celebration from "../components/Celebration.jsx";
 import Pokemon from "../components/Pokemon.jsx";
 import TotalPokemons from "../components/TotalPokemons.jsx";
 import { getPokemon } from "../services/pokemonService.js";
+import InputText from "../components/ui/InputText.jsx";
 
 function Halloffame() {
   const [name, setName] = useState("");
@@ -50,18 +51,11 @@ function Halloffame() {
           </div>
         </div>
         <div>
-          <input
-            type="text"
-            placeholder="Select your team"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
+          <p style={{ color: "#fff" }}>Pokémon selected: {pokemons.length}/6</p>
+          <InputText value={name} onChange={(e) => setName(e.target.value)} />
 
           <button onClick={searchPokemon}>Search</button>
-
-          <p>Pokémon selected: {pokemons.length}/6</p>
         </div>
-        <TotalPokemons />
       </main>
     </>
   );
