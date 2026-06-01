@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background inspirado na tela clássica */
+
+.frame {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+
+  overflow-y: auto;
+  font-family: sans-serif;
+  position: relative;
+}
+
+/* Moldura dourada estilo anime */
+.frame::before {
+  content: "";
+  position: absolute;
+  inset: 40px;
+  z-index: 0;
+
+  border: 12px solid #d8c84f;
+  box-shadow:
+    0 0 0 6px #f3e88b,
+    inset 0 0 20px rgba(255, 255, 255, 0.4);
+
+  background: radial-gradient(
+    circle at center,
+    #3d7be0 0%,
+    #2347a8 45%,
+    #1a237e 100%
+  );
+
+  border-radius: 8px;
+}
+
+/* Grade superior decorativa */
+.frame::after {
+  z-index: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 80px;
+
+  background: repeating-linear-gradient(
+    to right,
+    transparent 0 80px,
+    #d8c84f 80px 90px
+  );
+
+  border-top: 8px solid #d8c84f;
+}
+
+.card {
+  position: relative;  z-index: 1;  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+.creature_image {
+  min-width: 200px;
+  width: 220px;
+  height: auto;
+  border: 2px solid silver;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  text-align: center;
+  padding: 15px;
+}
+
+.creature_image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(225, 179, 130, 0.5);
+  border-color: #c8963e;
+}
+
