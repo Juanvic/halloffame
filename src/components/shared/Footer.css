@@ -1,4 +1,14 @@
 .footer-content {
     font-size: 14px;
-    color: #f3f4f6;
+    color: var(--white);
+}
+
+a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+a:visited{
+    text-decoration: none;
+    color: inherit; 
 }

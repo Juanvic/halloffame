@@ -19,16 +19,16 @@
   position: relative;
 }
 
-/* Moldura dourada estilo anime */
+/* Moldura dourada */
 .frame::before {
   content: "";
   position: absolute;
   inset: 40px;
   z-index: 0;
 
-  border: 12px solid #d8c84f;
+  border: 12px solid var(--gold);
   box-shadow:
-    0 0 0 6px #f3e88b,
+    0 0 0 6px var(--gold-dark),
     inset 0 0 20px rgba(255, 255, 255, 0.4);
 
   background: radial-gradient(
@@ -39,25 +39,7 @@
   );
 
   border-radius: 8px;
-}
-
-/* Grade superior decorativa */
-.frame::after {
-  z-index: 0;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 10%;
-  width: 80%;
-  height: 80px;
-
-  background: repeating-linear-gradient(
-    to right,
-    transparent 0 80px,
-    #d8c84f 80px 90px
-  );
-
-  border-top: 8px solid #d8c84f;
+  
 }
 
 .card {

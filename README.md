@@ -10,9 +10,6 @@
   <a href="https://github.com/Juanvic/halloffame/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Juanvic/halloffame.svg">
   </a>
-  <a href="https://github.com/Juanvic/halloffame/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/Juanvic/halloffame.svg">
-  </a>
   <img alt="GitHub" src="https://img.shields.io/github/license/Juanvic/halloffame.svg">
 </p>
 

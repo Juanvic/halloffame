@@ -28,7 +28,7 @@ export default function ShareButton({ pokemons }) {
 
   return (
     <div>
-      <button onClick={handleShare} style={{backgroundColor: 'transparent', border: 'none' }}>
+      <button onClick={handleShare} style={{backgroundColor: 'transparent', border: 'none', color: 'var(--white)' }}>
         <FaShareAlt size={24} title="Share"/>
       </button>
     </div>

@@ -28,6 +28,11 @@
     --social-bg: rgba(47, 48, 58, 0.5);
     --shadow:
       rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+    --white: #f3f4f6;
+    --gold: #d8c84f;
+    --gold-light: #fef1c9;
+    --gold-main: #dfac40;
+    --gold-dark: #8a5a16;
   }
 
 }
